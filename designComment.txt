@@ -1,0 +1,18 @@
+This project involved a game. You start out with a board of random pixel block colors
+and the goal is to get the entire board to have pixels of all the same color, which
+is achieved by first changing the color of the top-left pixel, such that if the 
+adjacent pixels are the same color as the new color, they form a bigger flooded area.
+
+This program used Tkinter and also one random.choice function. The random function
+created the board of random colors --the board is actually a list of these colors
+and the drawCell function calls these colors, to be used by drawBoard.
+
+The circles clicked uses mousePressed events for x and y in order to gauge if a
+user has clicked within the circle or not. Once they click a circle, it calls a
+recursive function which first checks if the old color is the same as the new
+or if the current pixel is connected with the other pixels around it in the
+flood area. If not, then the function changes the actual color in the list to the
+new color, and then calls drawBoard again to change pixel color.
+
+Color schemes were made by just defining a new list for the random.choice library
+to pick and append to the board list.
